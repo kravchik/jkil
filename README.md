@@ -1,7 +1,5 @@
 # Cursor on IJKL keys.
 
-TODO picture
-
 IJKL cursor for any OS
 
 Once you tried to use `ijkl` instead of cursor keys (notice - these keys compose the same pyramid as you used to) - it is impossible to go back. It is invaluable when you don't have to take your right hand off the keys to navigate a cursor. Instead - you just use Alt (or Command) with `ijkl` and move a cursor without.
@@ -22,4 +20,8 @@ Press Alt (Command) plus...
 * `Alt + h` - PgDown
 * `Alt + m` - Remove
 * `Alt + n` - Delete
+
+TODO picture
+TODO Windows (I have an implementation with Autohotkey)
+TODO Linux (I have an implemenation with Autokey)
 
