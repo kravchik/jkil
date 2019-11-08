@@ -14,12 +14,12 @@ This project contains a set of configs for different OSs to setup `ijkl` cursor 
 * works in familiar combination with Shift, Ctrl, etc.
 
 Press Alt (Command) plus...
-* Alt + ijkl - up, left, down, right
-* Alt + ; - Enter
-* Alt + u - Home
-* Alt + p - End
-* Alt + y - PgUp
-* Alt + h - PgDown
-* Alt + m - Remove
-* Alt + n - Delete
+* `Alt + ijkl` - up, left, down, right
+* `Alt + ;` - Enter
+* `Alt + u` - Home
+* `Alt + p` - End
+* `Alt + y` - PgUp
+* `Alt + h` - PgDown
+* `Alt + m` - Remove
+* `Alt + n` - Delete
 
