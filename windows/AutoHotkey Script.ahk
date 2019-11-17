@@ -17,14 +17,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #e::Run, %A_MyDocuments%
 #r::Run, cmd
 
-; RAlt+j ==> +Left
+; RAlt+j ==> Left
 >!j::Send, {Left}
 
 ; RAlt+Shift+j ==> Shift+Left
 >!+j::Send, +{Left}
 
-
-;RAlt+Ctrl+j ==> +j(10 times)
+; RAlt+Ctrl+j ==> Left (10 times)
 >!^j::
   Send, {Left}
   Send, {Left}
@@ -38,8 +37,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   Send, {Left}
 Return
 
-
-;RAlt+Shift+Ctrl+j ==> Shift+j(10 times)
+; RAlt+Shift+Ctrl+j ==> Shift+Left (10 times)
 >!+^j::
   Send, +{Left}
   Send, +{Left}
@@ -59,14 +57,13 @@ Return
 ; RAlt+Ctrl+Alt+j ==> Ctrl+Alt+Left
 >!^!j::Send, ^!{Left}
 
-; RAlt+k ==> +Down
+; RAlt+k ==> Down
 >!k::Send, {Down}
 
 ; RAlt+Shift+k ==> Shift+Down
 >!+k::Send, +{Down}
 
-
-;RAlt+Ctrl+k ==> +k(10 times)
+; RAlt+Ctrl+k ==> Down (10 times)
 >!^k::
   Send, {Down}
   Send, {Down}
@@ -80,8 +77,7 @@ Return
   Send, {Down}
 Return
 
-
-;RAlt+Shift+Ctrl+k ==> Shift+k(10 times)
+; RAlt+Shift+Ctrl+k ==> Shift+Down (10 times)
 >!+^k::
   Send, +{Down}
   Send, +{Down}
@@ -101,14 +97,13 @@ Return
 ; RAlt+Ctrl+Alt+k ==> Ctrl+Alt+Down
 >!^!k::Send, ^!{Down}
 
-; RAlt+l ==> +Right
+; RAlt+l ==> Right
 >!l::Send, {Right}
 
 ; RAlt+Shift+l ==> Shift+Right
 >!+l::Send, +{Right}
 
-
-;RAlt+Ctrl+l ==> +l(10 times)
+; RAlt+Ctrl+l ==> Right (10 times)
 >!^l::
   Send, {Right}
   Send, {Right}
@@ -122,8 +117,7 @@ Return
   Send, {Right}
 Return
 
-
-;RAlt+Shift+Ctrl+l ==> Shift+l(10 times)
+; RAlt+Shift+Ctrl+l ==> Shift+Right (10 times)
 >!+^l::
   Send, +{Right}
   Send, +{Right}
@@ -143,14 +137,13 @@ Return
 ; RAlt+Ctrl+Alt+l ==> Ctrl+Alt+Right
 >!^!l::Send, ^!{Right}
 
-; RAlt+i ==> +Up
+; RAlt+i ==> Up
 >!i::Send, {Up}
 
 ; RAlt+Shift+i ==> Shift+Up
 >!+i::Send, +{Up}
 
-
-;RAlt+Ctrl+i ==> +i(10 times)
+; RAlt+Ctrl+i ==> Up (10 times)
 >!^i::
   Send, {Up}
   Send, {Up}
@@ -164,8 +157,7 @@ Return
   Send, {Up}
 Return
 
-
-;RAlt+Shift+Ctrl+i ==> Shift+i(10 times)
+; RAlt+Shift+Ctrl+i ==> Shift+Up (10 times)
 >!+^i::
   Send, +{Up}
   Send, +{Up}
@@ -185,11 +177,10 @@ Return
 ; RAlt+Ctrl+Alt+i ==> Ctrl+Alt+Up
 >!^!i::Send, ^!{Up}
 
-; RAlt+m ==> +Backspace
+; RAlt+m ==> Backspace
 >!m::Send, {Backspace}
 
-
-;RAlt+Ctrl+m ==> Ctrl+m(10 times)
+; RAlt+Ctrl+m ==> Ctrl+Backspace (10 times)
 >!^m::
   Send, ^{Backspace}
   Send, ^{Backspace}
@@ -203,11 +194,10 @@ Return
   Send, ^{Backspace}
 Return
 
-; RAlt+n ==> +Delete
+; RAlt+n ==> Delete
 >!n::Send, {Delete}
 
-
-;RAlt+Ctrl+n ==> Ctrl+n(10 times)
+; RAlt+Ctrl+n ==> Ctrl+Delete (10 times)
 >!^n::
   Send, ^{Delete}
   Send, ^{Delete}
@@ -221,7 +211,7 @@ Return
   Send, ^{Delete}
 Return
 
-; RAlt+u ==> +Home
+; RAlt+u ==> Home
 >!u::Send, {Home}
 
 ; RAlt+Shift+u ==> Shift+Home
@@ -233,7 +223,7 @@ Return
 ; RAlt+Ctrl+Shift+u ==> Ctrl+Shift+Home
 >!^+u::Send, ^+{Home}
 
-; RAlt+o ==> +End
+; RAlt+o ==> End
 >!o::Send, {End}
 
 ; RAlt+Shift+o ==> Shift+End
@@ -245,7 +235,7 @@ Return
 ; RAlt+Ctrl+Shift+o ==> Ctrl+Shift+End
 >!^+o::Send, ^+{End}
 
-; RAlt+y ==> +PgUp
+; RAlt+y ==> PgUp
 >!y::Send, {PgUp}
 
 ; RAlt+Shift+y ==> Shift+PgUp
@@ -257,7 +247,7 @@ Return
 ; RAlt+Ctrl+Shift+y ==> Ctrl+Shift+PgUp
 >!^+y::Send, ^+{PgUp}
 
-; RAlt+h ==> +PgDn
+; RAlt+h ==> PgDn
 >!h::Send, {PgDn}
 
 ; RAlt+Shift+h ==> Shift+PgDn
@@ -269,7 +259,7 @@ Return
 ; RAlt+Ctrl+Shift+h ==> Ctrl+Shift+PgDn
 >!^+h::Send, ^+{PgDn}
 
-; RAlt+; ==> +Enter
+; RAlt+; ==> Enter
 >!;::Send, {Enter}
 
 ; RAlt+Shift+; ==> Shift+Enter
