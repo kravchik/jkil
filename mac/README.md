@@ -1,4 +1,4 @@
-Mapping of `[Command ⌘ + ijkl]` to the cursor keys.
+Mapping of `[Right Command ⌘ + ijkl]` to the cursor keys.
 
 1. Install (Karabiner)[https://pqrs.org/osx/karabiner/]
 1. Replace this karabiner.json at `[home]/.config/karabiner/`
