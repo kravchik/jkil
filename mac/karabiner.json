@@ -48,7 +48,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option",
+                                            "right_command",
                                             "left_option"
                                         ],
                                         "optional": [
@@ -95,7 +95,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -114,7 +114,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -133,7 +133,7 @@
                                     "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -152,7 +152,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option",
+                                            "right_command",
                                             "left_option"
                                         ],
                                         "optional": [
@@ -199,7 +199,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -218,7 +218,7 @@
                                     "key_code": "m",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -237,7 +237,7 @@
                                     "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -256,7 +256,7 @@
                                     "key_code": "u",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -275,7 +275,7 @@
                                     "key_code": "o",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -294,7 +294,7 @@
                                     "key_code": "y",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -313,7 +313,7 @@
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -332,7 +332,7 @@
                                     "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
-                                            "right_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -407,14 +407,6 @@
                             },
                             "to": {
                                 "key_code": "left_shift"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "right_command"
-                            },
-                            "to": {
-                                "key_code": "right_option"
                             }
                         }
                     ]
