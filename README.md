@@ -17,7 +17,7 @@ This project contains a set of configs for different OSs to setup `ijkl` cursor 
 * additional keys difficult to reach or absent on many keyboards (PgUp, PgDown, Home, End, Delete, Remove, Enter)
 * works in familiar combination with Shift, Ctrl, etc.
 
-Press Alt (Command) plus...
+Press `Right Alt` (`Right ⌘`) plus...
 * `Alt + ijkl` - up, left, down, right
 * `Alt + ;` - Enter
 * `Alt + u` - Home
