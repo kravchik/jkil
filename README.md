@@ -14,8 +14,8 @@ This project contains a set of configs for different OSs to setup `ijkl` cursor 
 * navigate cursor without leaving your typing position
 * press `Enter`, `Delete`, and other without leaving your typing position
 * consistent cursor hot-keys across all applications
-* additional keys difficult to reach or absent on many keyboards (PgUp, PgDown, Home, End, Delete, Remove, Enter)
-* works in familiar combination with Shift, Ctrl, etc.
+* additional keys difficult to reach or absent on many keyboards (`PgUp`, `PgDown`, `Home`, `End`, `Delete`, `Remove`, `Enter`)
+* works in familiar combination with `Shift`, `Ctrl`, etc.
 
 Press `Right Alt` (`Right ⌘`) plus...
 * `Alt + ijkl` - up, left, down, right
