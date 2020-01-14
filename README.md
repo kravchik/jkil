@@ -1,11 +1,11 @@
-# JKIL-Cursor
+# JKIL Arrows
 
 ```
   I        ↑
 J K L    ← ↓ →
 ```
 
-### Cursor on JKIL keys.
+### Cursor on `JKIL` keys.
 
 Once you tried to use `ijkl` instead of cursor keys (notice - these keys compose the same pyramid as you used to) - it is impossible to go back. It is invaluable when you don't have to take your right hand off the keys to navigate a cursor. Instead - you just use `Right Alt` (or `Right ⌘`) with `ijkl` and move a cursor without leaving the typing position.
 
@@ -26,6 +26,8 @@ Press `Right Alt` (`Right ⌘`) plus...
 * `Alt + h` - PgDown
 * `Alt + m` - Remove
 * `Alt + n` - Delete
+
+Also, I am remapping `Ctrl + Alt + jkil` to 10 pressings of the arrow (instead of to `Ctrl + Arrow`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
 
 TODO picture of layout
 
