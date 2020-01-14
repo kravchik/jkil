@@ -27,7 +27,7 @@ Press `Right Alt` (`Right ⌘`) plus...
 * `Alt + m` - Remove
 * `Alt + n` - Delete
 
-Also, I am remapping `Ctrl + Alt + jkil` to 10 pressings of the arrow (instead of to `Ctrl + Arrow`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
+Also, I am remapping `Ctrl + Alt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
 
 TODO picture of layout
 
