@@ -5,7 +5,9 @@
 J K L    ← ↓ →
 ```
 
-<img src="images/jkil-keyboard.jpg" width="200"/>
+![Image of JKIL](images/jkil-keyboard.jpg)
+
+
 
 ### Cursor on `JKIL` keys.
 
@@ -35,5 +37,5 @@ TODO picture of layout
 
 TODO switch `CTRL` and `ALT` for win and linux (as in Mac)
 
-![Image of JKIL](images/jkil-hand.jpg | width=200)
+![Image of JKIL](images/jkil-hand.jpg)
 
