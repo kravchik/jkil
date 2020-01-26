@@ -5,7 +5,7 @@
 J K L    ← ↓ →
 ```
 
-![Image of JKIL](images/jkil-keyboard.png)
+![Image of JKIL](images/jkil-keyboard.jpg)
 
 
 ### Cursor on `JKIL` keys.
