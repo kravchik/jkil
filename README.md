@@ -5,6 +5,9 @@
 J K L    ← ↓ →
 ```
 
+![Image of JKIL](images/jkil-keyboard.png)
+
+
 ### Cursor on `JKIL` keys.
 
 Once you tried to use `ijkl` instead of cursor keys (notice - these keys compose the same pyramid as you used to) - it is impossible to go back. It is invaluable when you don't have to take your right hand off the keys to navigate a cursor. Instead - you just use `Right Alt` (or `Right ⌘`) with `ijkl` and move a cursor without leaving the typing position.
