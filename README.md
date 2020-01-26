@@ -5,7 +5,8 @@
 J K L    ← ↓ →
 ```
 
-![Image of JKIL](images/jkil-keyboard.jpg)
+![Image of JKIL](images/jkil-keyboard.jpg | width=200)
+
 
 
 ### Cursor on `JKIL` keys.
@@ -34,8 +35,7 @@ Also, I am remapping `Ctrl + Alt + j` to 10 pressings of `Left` instead of to `C
 
 TODO picture of layout
 
-TODO picture of a hand on keys
-
 TODO switch `CTRL` and `ALT` for win and linux (as in Mac)
 
+![Image of JKIL](images/jkil-hand.jpg | width=200)
 
