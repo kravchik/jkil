@@ -3,19 +3,27 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+;#MaxHotkeysPerInterval 10000
 
 ;https://autohotkey.com/board/topic/41010-change-language-hotkey/
 ;http://superuser.com/questions/309005/disable-the-activation-of-the-menu-bar-when-alt-is-pressed-in-windows-7
 
-;#MaxHotkeysPerInterval 10000
+;use CapsLock to change a language (implemented by sending Alt+Shift)
+;CapsLock::Send, {Alt Down}{Shift Down}{Shift Up}{Alt Up}
 
-;плохо работает с ридером
+;Disable alt-menu (not always works)
 ;~LAlt Up:: return
 
-~LWin Up:: return
-~RWin Up:: return
-#e::Run, %A_MyDocuments%
-#r::Run, cmd
+;disable win-menu
+;~LWin Up:: return
+;~RWin Up:: return
+
+;#e::Run, %A_MyDocuments%
+;#r::Run, cmd
+
+;
+; JKIL part
+;
 
 ; RAlt+j ==> Left
 >!j::Send, {Left}
