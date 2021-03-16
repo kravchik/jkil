@@ -51,11 +51,11 @@ Return
   Send, +{Left}
 Return
 
-; RAlt+Alt+j ==> Alt+Left
->!!j::Send, !{Left}
+; RAlt+LAlt+j ==> Alt+Left
+>!<!j::Send, !{Left}
 
-; RAlt+Ctrl+Alt+j ==> Ctrl+Alt+Left
->!^!j::Send, ^!{Left}
+; RAlt+Ctrl+LAlt+j ==> Ctrl+Alt+Left
+>!^<!j::Send, ^!{Left}
 
 ; RAlt+k ==> Down
 >!k::Send, {Down}
@@ -91,11 +91,11 @@ Return
   Send, +{Down}
 Return
 
-; RAlt+Alt+k ==> Alt+Down
->!!k::Send, !{Down}
+; RAlt+LAlt+k ==> Alt+Down
+>!<!k::Send, !{Down}
 
-; RAlt+Ctrl+Alt+k ==> Ctrl+Alt+Down
->!^!k::Send, ^!{Down}
+; RAlt+Ctrl+LAlt+k ==> Ctrl+Alt+Down
+>!^<!k::Send, ^!{Down}
 
 ; RAlt+l ==> Right
 >!l::Send, {Right}
@@ -131,11 +131,11 @@ Return
   Send, +{Right}
 Return
 
-; RAlt+Alt+l ==> Alt+Right
->!!l::Send, !{Right}
+; RAlt+LAlt+l ==> Alt+Right
+>!<!l::Send, !{Right}
 
-; RAlt+Ctrl+Alt+l ==> Ctrl+Alt+Right
->!^!l::Send, ^!{Right}
+; RAlt+Ctrl+LAlt+l ==> Ctrl+Alt+Right
+>!^<!l::Send, ^!{Right}
 
 ; RAlt+i ==> Up
 >!i::Send, {Up}
@@ -171,11 +171,11 @@ Return
   Send, +{Up}
 Return
 
-; RAlt+Alt+i ==> Alt+Up
->!!i::Send, !{Up}
+; RAlt+LAlt+i ==> Alt+Up
+>!<!i::Send, !{Up}
 
-; RAlt+Ctrl+Alt+i ==> Ctrl+Alt+Up
->!^!i::Send, ^!{Up}
+; RAlt+Ctrl+LAlt+i ==> Ctrl+Alt+Up
+>!^<!i::Send, ^!{Up}
 
 ; RAlt+m ==> Backspace
 >!m::Send, {Backspace}
