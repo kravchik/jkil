@@ -5,7 +5,7 @@
 
 ## Switch (mostly) Ctrl <-> Alt
 
-[Switch Alt<->Ctrl](ctrlalt/README.md)
+[Switch Alt<->Ctrl](ctrlalt)
 
 Mac has many strange decisions but its `⌘+c`, `⌘+v` - is far far far more convenient than win/linux `Ctrl+c`, `Ctrl+v` because you can use your thumb to press `⌘` instead of pinky `Ctrl`. Once you used to it, there is no turning back.
 
