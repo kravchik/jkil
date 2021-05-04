@@ -33,9 +33,6 @@ Press `Right Alt` (`Right ⌘`) plus...
 
 Also, I am remapping `Ctrl + Alt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
 
-TODO picture of layout
-
-TODO switch `CTRL` and `ALT` for win and linux (as in Mac)
 
 ![Image of JKIL](images/jkil-hand.jpg)
 
