@@ -1,4 +1,6 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿;Windows AutoHotkey remapping
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ;+Shift #Win !Alt ^Ctrl
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.

@@ -5,9 +5,9 @@
 J K L    ← ↓ →
 ```
 
-![Image of JKIL](images/jkil-keyboard.jpg)
+![Image of JKIL](../images/jkil-keyboard.jpg)
 
-
+TODO remove everything not specific to arrows
 
 ### Cursor on `JKIL` keys.
 
@@ -34,5 +34,5 @@ Press `Right Alt` (`Right ⌘`) plus...
 Also, I am remapping `Ctrl + Alt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
 
 
-![Image of JKIL](images/jkil-hand.jpg)
+![Image of JKIL](../images/jkil-hand.jpg)
 

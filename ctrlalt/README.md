@@ -1,9 +1,23 @@
 
-# Switch Ctrl and Alt
+## Switch (mostly) Ctrl <-> Alt
 
-Mac has many strange decisions but its `Command+zxcv` (redo, cut, copy, past) - is far far far more convinient than win/linux `Ctrl+zxcv`
+[Switch Alt<->Ctrl](ctralt/README.md)
 
-This dir is about switching `ctrl` and `alt` for linux and win.
+Mac has many strange decisions but its `⌘+c`, `⌘+v` - is far far far more convenient than win/linux `Ctrl+c`, `Ctrl+v` because you can use your thumb to press ⌘ instead of pinky Ctrl. Once you used to it, there is no turning back.
+
+Note. This is not just a simple switch of `Ctrl <-> Alt` keys!  Because in that case, one should also do something with all the hot-keys many of which are not a simple task to remap (because they are system - Alt+Tab, Alt+F4, etc.). Let alone many app-specific hot-keys.
+So, in this solution - we are mostly remapping just a simple `Alt+key` and some specially selected hot-keys (like `Shift+Ctrl+V` for special Paste).
+
+A list of remappings:
+
+* `Alt+KEY` -> `Ctrl+KEY` (where key is any key from `a` to `z`)
+* `Ctrl+KEY` -> `Alt+KEY` (where key is any key from `a` to `z`)
+
+Because of IntelliJ hot-keys. Not sure if it will hinder in other apps.
+* `Alt+SPACE` -> `Ctrl+SPACE`
+* `Alt+Shift+SPACE` -> `Ctrl+Shift+SPACE`
+* `Alt+Shift+z` -> `Ctrl+Shift+z`
+* `Alt+Shift+v` -> `Ctrl+Shift+v`
 
 ## Win
 
@@ -11,8 +25,4 @@ TODO
 
 ## Linux
 
-1. switch left Alt and left Ctrl system wide [this is how](https://askubuntu.com/questions/93624/how-do-i-swap-left-ctrl-with-left-alt-on-my-keyboard)
-
-2. switch 'close window' hot key
-
-3. via Autokey, send `ctrl+tab`, `ctrl+shift+tab` via pressing new `alt+tab`, `alt+shift+tab` (for Chrome and other apps)
+TODO
