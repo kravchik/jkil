@@ -3,8 +3,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;TODO left alt
-
 ;Windows AutoHotkey remapping
 
 ;Switch simple Ctrl+key with Alt+key and vice versa
