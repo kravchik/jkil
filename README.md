@@ -4,7 +4,7 @@
 
 [Map ← ↓ ↑ → to JKIL](jkil)
 
-![Image of JKIL](../images/jkil-keyboard.jpg)
+![Image of JKIL](images/jkil-keyboard.jpg)
 
 Mapping of arrows and some other Home-Ends to the right hand.
 
