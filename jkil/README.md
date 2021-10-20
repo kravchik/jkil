@@ -17,21 +17,21 @@ This project contains a set of configs for different OSs to setup `ijkl` cursor 
 
 * navigate cursor without leaving your typing position
 * press `Enter`, `Delete`, and other without leaving your typing position
-* consistent cursor hot-keys across all applications
-* additional keys difficult to reach or absent on many keyboards (`PgUp`, `PgDown`, `Home`, `End`, `Delete`, `Remove`, `Enter`)
-* works in familiar combination with `Shift`, `Ctrl`, etc.
+* consistent cursor hot-keys across all applications, system-wide
+* additional keys difficult to reach or absent on some keyboards (`PgUp`, `PgDown`, `Home`, `End`, `Delete`, `Remove`, `Enter`)
+* works with `Shift`, `Ctrl`, etc.
 
 Press `Right Alt` (`Right ⌘`) plus...
-* `Alt + ijkl` - up, left, down, right
-* `Alt + ;` - Enter
-* `Alt + u` - Home
-* `Alt + p` - End
-* `Alt + y` - PgUp
-* `Alt + h` - PgDown
-* `Alt + m` - Remove
-* `Alt + n` - Delete
+* `RAlt + ijkl` - up, left, down, right
+* `RAlt + ;` - Enter
+* `RAlt + u` - Home
+* `RAlt + p` - End
+* `RAlt + y` - PgUp
+* `RAlt + h` - PgDown
+* `RAlt + m` - Remove
+* `RAlt + n` - Delete
 
-Also, I am remapping `Ctrl + Alt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement.*
+Also, I am remapping `Ctrl + RAlt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement, or remove as questionable.*
 
 
 ![Image of JKIL](../images/jkil-hand.jpg)
