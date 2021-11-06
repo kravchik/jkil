@@ -59,7 +59,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 <!z::Send, ^{z}
 <^z::Send, !{z}
 
-<;Some IntelliJ specific hot-keys
+;Some IntelliJ specific hot-keys
 <!Space::^Space
 <!+Space::^+Space
 <!+z::Send, ^+{z}
