@@ -1,6 +1,4 @@
-﻿;Windows AutoHotkey remapping
-
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ;+Shift #Win !Alt ^Ctrl
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -10,15 +8,25 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;https://autohotkey.com/board/topic/41010-change-language-hotkey/
 ;http://superuser.com/questions/309005/disable-the-activation-of-the-menu-bar-when-alt-is-pressed-in-windows-7
 
-;use CapsLock to change a language (implemented by sending Alt+Shift)
-;CapsLock::Send, {Alt Down}{Shift Down}{Shift Up}{Alt Up}
+;use CapsLock to change a language
+;CapsLock::Send, {Ctrl Down}{Shift Down}{Shift Up}{Ctrl Up}
+
+;Disable alt-menu
+;Alt::
+;  KeyWait, Alt
+;  return
+;LAlt Up::
+;  if (A_PriorKey = "Alt")
+;    return
+;  return
 
 ;Disable alt-menu (not always works)
-;~LAlt Up:: return
+;LAlt Up:: return
+;RAlt Up:: return
 
 ;disable win-menu
-;~LWin Up:: return
-;~RWin Up:: return
+;LWin Up:: return
+;RWin Up:: return
 
 ;#e::Run, %A_MyDocuments%
 ;#r::Run, cmd
@@ -28,13 +36,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;
 
 ; RAlt+j ==> Left
->!j::Send, {Left}
+*>!j::Send, {Left}
 
 ; RAlt+Shift+j ==> Shift+Left
->!+j::Send, +{Left}
+*>!+j::Send, +{Left}
 
 ; RAlt+Ctrl+j ==> Left (10 times)
->!^j::
+*>!#j::
   Send, {Left}
   Send, {Left}
   Send, {Left}
@@ -48,7 +56,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Return
 
 ; RAlt+Shift+Ctrl+j ==> Shift+Left (10 times)
->!+^j::
+*>!+#j::
   Send, +{Left}
   Send, +{Left}
   Send, +{Left}
@@ -62,19 +70,19 @@ Return
 Return
 
 ; RAlt+LAlt+j ==> Alt+Left
->!<!j::Send, !{Left}
+*>!<!j::Send, !{Left}
 
 ; RAlt+Ctrl+LAlt+j ==> Ctrl+Alt+Left
->!^<!j::Send, ^!{Left}
+*>!^<!j::Send, ^!{Left}
 
 ; RAlt+k ==> Down
->!k::Send, {Down}
+*>!k::Send, {Down}
 
 ; RAlt+Shift+k ==> Shift+Down
->!+k::Send, +{Down}
+*>!+k::Send, +{Down}
 
 ; RAlt+Ctrl+k ==> Down (10 times)
->!^k::
+*>!#k::
   Send, {Down}
   Send, {Down}
   Send, {Down}
@@ -88,7 +96,7 @@ Return
 Return
 
 ; RAlt+Shift+Ctrl+k ==> Shift+Down (10 times)
->!+^k::
+*>!+#k::
   Send, +{Down}
   Send, +{Down}
   Send, +{Down}
@@ -102,19 +110,19 @@ Return
 Return
 
 ; RAlt+LAlt+k ==> Alt+Down
->!<!k::Send, !{Down}
+*>!<!k::Send, !{Down}
 
 ; RAlt+Ctrl+LAlt+k ==> Ctrl+Alt+Down
->!^<!k::Send, ^!{Down}
+*>!^<!k::Send, ^!{Down}
 
 ; RAlt+l ==> Right
->!l::Send, {Right}
+*>!l::Send, {Right}
 
 ; RAlt+Shift+l ==> Shift+Right
->!+l::Send, +{Right}
+*>!+l::Send, +{Right}
 
 ; RAlt+Ctrl+l ==> Right (10 times)
->!^l::
+*>!#l::
   Send, {Right}
   Send, {Right}
   Send, {Right}
@@ -128,7 +136,7 @@ Return
 Return
 
 ; RAlt+Shift+Ctrl+l ==> Shift+Right (10 times)
->!+^l::
+*>!+#l::
   Send, +{Right}
   Send, +{Right}
   Send, +{Right}
@@ -142,19 +150,19 @@ Return
 Return
 
 ; RAlt+LAlt+l ==> Alt+Right
->!<!l::Send, !{Right}
+*>!<!l::Send, !{Right}
 
 ; RAlt+Ctrl+LAlt+l ==> Ctrl+Alt+Right
->!^<!l::Send, ^!{Right}
+*>!^<!l::Send, ^!{Right}
 
 ; RAlt+i ==> Up
->!i::Send, {Up}
+*>!i::Send, {Up}
 
 ; RAlt+Shift+i ==> Shift+Up
->!+i::Send, +{Up}
+*>!+i::Send, +{Up}
 
 ; RAlt+Ctrl+i ==> Up (10 times)
->!^i::
+*>!#i::
   Send, {Up}
   Send, {Up}
   Send, {Up}
@@ -168,7 +176,7 @@ Return
 Return
 
 ; RAlt+Shift+Ctrl+i ==> Shift+Up (10 times)
->!+^i::
+*>!+#i::
   Send, +{Up}
   Send, +{Up}
   Send, +{Up}
@@ -182,104 +190,104 @@ Return
 Return
 
 ; RAlt+LAlt+i ==> Alt+Up
->!<!i::Send, !{Up}
+*>!<!i::Send, !{Up}
 
 ; RAlt+Ctrl+LAlt+i ==> Ctrl+Alt+Up
->!^<!i::Send, ^!{Up}
+*>!^<!i::Send, ^!{Up}
 
 ; RAlt+m ==> Backspace
->!m::Send, {Backspace}
+*>!m::Send, {Backspace}
 
-; RAlt+Ctrl+m ==> Ctrl+Backspace (10 times)
->!^m::
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
-  Send, ^{Backspace}
+; RAlt+Ctrl+m ==> Backspace (10 times)
+*>!#m::
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
+  Send, {Backspace}
 Return
 
 ; RAlt+n ==> Delete
->!n::Send, {Delete}
+*>!n::Send, {Delete}
 
-; RAlt+Ctrl+n ==> Ctrl+Delete (10 times)
->!^n::
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
-  Send, ^{Delete}
+; RAlt+Ctrl+n ==> Delete (10 times)
+*>!#n::
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
+  Send, {Delete}
 Return
 
 ; RAlt+u ==> Home
->!u::Send, {Home}
+*>!u::Send, {Home}
 
 ; RAlt+Shift+u ==> Shift+Home
->!+u::Send, +{Home}
+*>!+u::Send, +{Home}
 
 ; RAlt+Ctrl+u ==> Ctrl+Home
->!^u::Send, ^{Home}
+;*>!^u::Send, ^{Home}
 
 ; RAlt+Ctrl+Shift+u ==> Ctrl+Shift+Home
->!^+u::Send, ^+{Home}
+;*>!^+u::Send, ^+{Home}
 
 ; RAlt+o ==> End
->!o::Send, {End}
+*>!o::Send, {End}
 
 ; RAlt+Shift+o ==> Shift+End
->!+o::Send, +{End}
+*>!+o::Send, +{End}
 
 ; RAlt+Ctrl+o ==> Ctrl+End
->!^o::Send, ^{End}
+;*>!^o::Send, ^{End}
 
 ; RAlt+Ctrl+Shift+o ==> Ctrl+Shift+End
->!^+o::Send, ^+{End}
+;*>!^+o::Send, ^+{End}
 
 ; RAlt+y ==> PgUp
->!y::Send, {PgUp}
+*>!y::Send, {PgUp}
 
 ; RAlt+Shift+y ==> Shift+PgUp
->!+y::Send, +{PgUp}
+*>!+y::Send, +{PgUp}
 
 ; RAlt+Ctrl+y ==> Ctrl+PgUp
->!^y::Send, ^{PgUp}
+*>!^y::Send, ^{PgUp}
 
 ; RAlt+Ctrl+Shift+y ==> Ctrl+Shift+PgUp
->!^+y::Send, ^+{PgUp}
+*>!^+y::Send, ^+{PgUp}
 
 ; RAlt+h ==> PgDn
->!h::Send, {PgDn}
+*>!h::Send, {PgDn}
 
 ; RAlt+Shift+h ==> Shift+PgDn
->!+h::Send, +{PgDn}
+*>!+h::Send, +{PgDn}
 
 ; RAlt+Ctrl+h ==> Ctrl+PgDn
->!^h::Send, ^{PgDn}
+*>!^h::Send, ^{PgDn}
 
 ; RAlt+Ctrl+Shift+h ==> Ctrl+Shift+PgDn
->!^+h::Send, ^+{PgDn}
+;*>!^+h::Send, ^+{PgDn}
 
 ; RAlt+; ==> Enter
->!;::Send, {Enter}
+*>!;::Send, {Enter}
 
 ; RAlt+Shift+; ==> Shift+Enter
->!+;::Send, +{Enter}
+*>!+;::Send, +{Enter}
 
 ; RAlt+Ctrl+; ==> Ctrl+Enter
->!^;::Send, ^{Enter}
+;*>!^;::Send, ^{Enter}
 
 ; RAlt+Ctrl+Shift+; ==> Ctrl+Shift+Enter
->!^+;::Send, ^+{Enter}
+;*>!^+;::Send, ^+{Enter}
 
 
 
@@ -299,4 +307,3 @@ Return
 ;~LAlt Up::
 ;    Send, {LAlt Up}
 ;return
-

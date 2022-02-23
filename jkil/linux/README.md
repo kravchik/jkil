@@ -1,12 +1,20 @@
 
+# JKIL Arrows (linux)
+
+```
+  I        ↑
+J K L    ← ↓ →
+```
+
+![Image of JKIL](../../images/jkil-keyboard.jpg)
+
+In this doc only the difference (linux specific) with [the main concept](../README.md) is described.
+
 [AutoKey](https://github.com/autokey/autokey) is used to generate press events.
 
-All events are sent from `Alt` + `jkl`. It is an important note because it will block some hot-keys (`ctrl+alt+l` in Idea for example).
-
-AutoKey doesn't distinguish between right and left `Alt` so it is impossible here to bind `right Alt` only.
-
-There is a hack possible to avoid it (`Super+jkl` and remap `right Alt` to `Super`) but it is pretty complex, I'll post it only if demand exists.
-
+All events are sent from `Alt` + `jkl`. This will prevent some short-cuts from working (`Alt` + `f` opening File menu, for example). This is because AutoKey doesn't distinguish between right and left `Alt` so it is impossible here to bind `right Alt` only.
+      
+Also, instead of binding `Ctrl Alt + jkil` to navigate-fast, `Win Alt + jkil` mapped instead (because there are too many `Ctrl Alt + something` short-cuts everywhere).
 
 ## Setup
 * Install AutoKey

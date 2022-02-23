@@ -1,3 +1,14 @@
+# JKIL Arrows (MAC)
+
+```
+  I        ↑
+J K L    ← ↓ →
+```
+
+![Image of JKIL](../../images/jkil-keyboard.jpg)
+
+In this doc only the difference (Mac specific) with [the main concept](../README.md) is described.
+
 Mapping of `[Right Command ⌘] + ijkl` to the cursor keys.
 
 1. Install (Karabiner)[https://pqrs.org/osx/karabiner/]
