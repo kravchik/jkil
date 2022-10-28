@@ -8,12 +8,12 @@ J K L    ← ↓ →
 
 ![Image of JKIL](../../../images/jkil-keyboard.jpg)
 
-xkb - is a set of configuration files located at /usr/share/X11/xkb. It is a quite a sophisticated system used to configure everyting, from layout to special keys.
-I'd point out several ways to work with it.
+`xkb` - is a set of configuration files located at `/usr/share/X11/xkb/`. It is a quite a sophisticated system used to configure everything, from layout to special keys.
+There are several ways to work with it.
 
-1. make changes directly to config files (TODO, try to implement)
-2. make 'right' changes to config files so that the settings would be availble via Ubuntu's settings GUI  (TODO, try to implement)
-3. to get "compiled config", which is one file with all tweaks (used by Ubuntu) applied. Modify it, and upload.
+1. make changes directly to config files **(TODO, try to implement)**
+2. make 'right' changes to config files so that the settings would be availble via Ubuntu's settings GUI  **(TODO, try to implement)**
+3. get "compiled config", which is one file with all tweaks (used by Ubuntu), layouts, etc. compiled together. Modify it, and upload.
 
 It is yet to manage #1, or #2 approach. Currently, I am using #3. It has one big disadvantage - when you make any change to keyboard settings, the system will recompile the configuration file and "forget" about your changes. So, you need to re-read the newly compiled configuration, apply changes, and upload. And, of course, you apply this compiled configuration after each restart.
 But even given that - this approach is much better than Autokey.
