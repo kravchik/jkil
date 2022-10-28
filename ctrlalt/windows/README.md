@@ -21,8 +21,5 @@ Because of IntelliJ hot-keys. Not sure if it will hinder in other apps.
 
 ## Win
 
-Install [AutoHotkey](https://www.autohotkey.com/) and use [this script file](windows/jkil.ctrlalt.ahk).
+Install [AutoHotkey](https://www.autohotkey.com/) and use [this config file](jkil.ctrlalt.ahk).
 
-## Linux
-
-TODO
