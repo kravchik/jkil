@@ -8,17 +8,6 @@ J K L    ← ↓ →
 
 ![Image of JKIL](../../images/jkil-keyboard.jpg)
 
-In this doc only the difference (linux specific) with [the main concept](../../README.md) is described.
+The currently working solution is to implement the mapping [via xkb](xkb)
 
-Previously, I was using [AutoKey](https://github.com/autokey/autokey)
-
- is used to generate press events.
-
-All events are sent from `Alt` + `jkl`. This will prevent some short-cuts from working (`Alt` + `f` opening File menu, for example). This is because AutoKey doesn't distinguish between right and left `Alt` so it is impossible here to bind `right Alt` only.
-      
-Also, instead of binding `Ctrl Alt + jkil` to navigate-fast, `Win Alt + jkil` mapped instead (because there are too many `Ctrl Alt + something` short-cuts everywhere).
-
-## Setup
-* Install AutoKey
-* copy `CURSOR` directory to `.config/autokey/data/`
-* restart AutoKey
+Previously, I was using [AutoKey](autokey) to make `jkil->arrows` mapping. But it has several drawbacks. First, autokey doesn't discern between left and right alt, which led to some hacks needed in order to keep some hotkeys available (`ctrl+alt+l`, for example). And the second, sometimes, Autokey just slows down and freezes. Which is a no go.
