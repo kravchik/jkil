@@ -8,8 +8,6 @@ J K L    ← ↓ →
 
 ![Image of JKIL](../../../images/jkil-keyboard.jpg)
 
-The currently working solution is to implement the mapping [via xkb](xkb)
-
 xkb - is a set of configuration files located at /usr/share/X11/xkb. It is a quite a sophisticated system used to configure everyting, from layout to special keys.
 I'd point out several ways to work with it.
 
