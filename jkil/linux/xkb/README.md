@@ -49,7 +49,7 @@ In xkb_types section add:
 'Symbols' in xkb are defining actual keys and how they behave in each of four 'levels'. In jkil configuration I am defining only 'action' field, so the configuration doesn't override symbols themselves.
 Also, two groups are defined here with the same action. It is for two layouts.
 
-In xkb_symbols section add:
+In xkb_symbols section add (not replace!):
 
 ```
     key <AC07> {//j : LEFT
