@@ -18,13 +18,20 @@ There are several ways to work with it.
 It is yet to manage #1, or #2 approach. Currently, I am using #3. It has one big disadvantage - when you make any change to keyboard settings, the system will recompile the configuration file and "forget" about your changes. So, you need to re-read the newly compiled configuration, apply changes, and upload. And, of course, you apply this compiled configuration after each restart.
 But even given that - this approach is much better than Autokey.
 
-### Load compiled keyboard configuration
+### 1. Enable switching to 3rd level
+In my configuration, I am using '3rd level' to define jkil cursor. And in order to do this, it key should be defined.
+![Image of setting](setting1.png)
+
+### 2. Load compiled keyboard configuration
+In this step, a compiled file with a full keyboard configuration should be "pulled" from the system.
 
 `$ xkbcomp $DISPLAY output.xkb`
 
-### Edit output.xkb file.
+### 3. Edit output.xkb file.
 
-#### in xkb_types section add
+'Types' in xkb are defining combinations of mod keys (shift, alt, etc) and how they select one of four levels in a specific key configuration.
+
+In xkb_types section add:
 
 ```
     type "JKIL_TYPE" {
@@ -39,7 +46,11 @@ But even given that - this approach is much better than Autokey.
     };
 ```
 
-#### in xkb_symbols section add
+'Symbols' in xkb are defining actual keys and how they behave in each of four 'levels'. In jkil configuration I am defining only 'action' field, so the configuration doesn't override symbols themselves.
+Also, two groups are defined here with the same action. It is for two layouts.
+
+In xkb_symbols section add:
+
 ```
     key <AC07> {//j : LEFT
         type= "JKIL_TYPE",
@@ -100,7 +111,9 @@ But even given that - this approach is much better than Autokey.
 
 ```
 
-### Finally, upload changed configuration.
+*In my configuration, in Cyrillic group, ENTER won't work until I remove an explicit type[group2]= "ALPHABETIC" for AC10 semicolon key. For other keys there is no such exception.*
+
+### 4. Finally, upload changed configuration.
 
 `$ xkbcomp output.xkb $DISPLAY`
 
