@@ -19,7 +19,7 @@ It is yet to manage #1, or #2 approach. Currently, I am using #3. It has one big
 But even given that - this approach is much better than Autokey.
 
 ### 1. Enable switching to 3rd level
-In my configuration, I am using '3rd level' to define jkil cursor. And in order to do this, it key should be defined.
+In my configuration, I am using '3rd level' to define jkil cursor. And in order use it, its key should be defined.
 ![Image of setting](setting1.png)
 
 ### 2. Load compiled keyboard configuration
