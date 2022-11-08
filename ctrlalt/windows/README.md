@@ -5,21 +5,16 @@
 
 Mac has many strange decisions but its `⌘+c`, `⌘+v` - is far far far more convenient than win/linux `Ctrl+c`, `Ctrl+v` because you can use your thumb to press ⌘ instead of pinky Ctrl. Once you used to it, there is no turning back.
 
-Note. This is not just a simple switch of `Ctrl <-> Alt` keys!  Because in that case, one should also do something with all the hot-keys many of which are not a simple task to remap (because they are system - Alt+Tab, Alt+F4, etc.). Let alone many app-specific hot-keys.
-So, in this solution - we are mostly remapping just a simple `Alt+key` and some specially selected hot-keys (like `Shift+Ctrl+V` for special Paste).
+In this approach, it is just left ctrl/alt keys switched. Just download and double-click [the registry file](ctr-alt.reg).
+If you want to revert the changes - just use [another registry file](remove.ctr-alt.reg).
 
-A list of remappings:
+In this approach, it is just left ctrl/alt keys switched. This means that all shortcuts change to:
 
-* `Alt+KEY` -> `Ctrl+KEY` (where key is any key from `a` to `z`)
-* `Ctrl+KEY` -> `Alt+KEY` (where key is any key from `a` to `z`)
+* cycle windows -> `ctrl+tab`
+* close window -> `ctrl+F4`
+* cycle tabs in chrome -> `alt+tab`
+* access menu -> `ctrl+key`
 
-Because of IntelliJ hot-keys. Not sure if it will hinder in other apps.
-* `Alt+SPACE` -> `Ctrl+SPACE`
-* `Alt+Shift+SPACE` -> `Ctrl+Shift+SPACE`
-* `Alt+Shift+z` -> `Ctrl+Shift+z`
-* `Alt+Shift+v` -> `Ctrl+Shift+v`
+I tried to handle those with different approaches but ended up that it is simpler to just get used to it.
 
-## Win
-
-Install [AutoHotkey](https://www.autohotkey.com/) and use [this config file](jkil.ctrlalt.ahk).
 
