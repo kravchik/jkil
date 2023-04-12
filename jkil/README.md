@@ -20,17 +20,14 @@ This project contains a set of configs for different OSs to setup `jkil` cursor 
 * works with `Shift`, `Ctrl`, etc.
 
 Press `Right Alt` (`Right ⌘`) plus...
-* `RAlt + ijkl` - up, left, down, right
+* `RAlt + jkil` - left, down, up, right
 * `RAlt + ;` - Enter
-* `RAlt + u` - Home
-* `RAlt + p` - End
+* `RAlt + u` - Line start
+* `RAlt + p` - Line end
 * `RAlt + y` - PgUp
 * `RAlt + h` - PgDown
 * `RAlt + m` - Remove
 * `RAlt + n` - Delete
-
-Also, I am remapping `Ctrl + RAlt + j` to 10 pressings of `Left` instead of to `Ctrl + Left` (same for `Up, Down, Right`). I believe, that it is much more convenient in the long run. *Todo: make a deeper justification in a separate statement, or remove as questionable.*
-
 
 ![Image of JKIL](../images/jkil-hand.jpg)
 
