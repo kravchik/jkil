@@ -8,41 +8,45 @@ CapsLock::Send "#{Space}"
 ; the keys usable as modifiers in combinations.
 A_MenuMaskKey := "vkE8"
 
-; Left Alt: do nothing when tapped alone, but keep Alt combinations working.
+; Left Alt: proxy the key manually so combinations still work, but a stand-alone
+; tap does not focus the application menu.
 *LAlt::
 {
-  KeyWait "LAlt"
+  Send "{Blind}{LAlt DownR}"
 }
 
 *LAlt Up::
 {
   if (A_PriorKey = "LAlt")
-    return
-  Send "{LAlt Up}"
+    Send "{Blind}{vkE8}{LAlt Up}"
+  else
+    Send "{Blind}{LAlt Up}"
 }
 
-; Left Win: do nothing when tapped alone, but keep Win combinations working.
+; Left Win: same idea, but prevent the Start menu on a stand-alone tap.
 *LWin::
 {
-  KeyWait "LWin"
+  Send "{Blind}{LWin DownR}"
 }
 
 *LWin Up::
 {
   if (A_PriorKey = "LWin")
-    return
-  Send "{LWin Up}"
+    Send "{Blind}{vkE8}{LWin Up}"
+  else
+    Send "{Blind}{LWin Up}"
 }
 
 ; Right Win: same behavior as Left Win.
 *RWin::
 {
-  KeyWait "RWin"
+  Send "{Blind}{RWin DownR}"
 }
 
 *RWin Up::
 {
   if (A_PriorKey = "RWin")
-    return
-  Send "{RWin Up}"
+    Send "{Blind}{vkE8}{RWin Up}"
+  else
+    Send "{Blind}{RWin Up}"
 }
