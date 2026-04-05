@@ -19,26 +19,6 @@ Uses [AutoHotkey](https://www.autohotkey.com/).
 4. Optionally also run [extras.ahk](extras.ahk).
 5. Optional: add the scripts you use to Windows startup if you want them enabled after login.
 
-## Files
-
-* [jkil.x10.ahk](jkil.x10.ahk) for the `x10` profile (`Left Ctrl` means repeat 10 times)
-* [jkil.by-word.ahk](jkil.by-word.ahk) for the by-word profile (`Left Ctrl` means normal `Ctrl`)
-* [extras.ahk](extras.ahk) for extra helpers such as `CapsLock` language switch and suppressing stand-alone `Alt`/`Win` menu behavior
-* [ralt-to-appskey.reg](ralt-to-appskey.reg) to remap physical `Right Alt` to `AppsKey`
-* [swap-lctrl-lalt-and-ralt-to-appskey.reg](swap-lctrl-lalt-and-ralt-to-appskey.reg) to keep swapped left `Ctrl/Alt` and also remap physical `Right Alt` to `AppsKey`
-* [reset-scancode-map.reg](reset-scancode-map.reg) to remove all `Scancode Map` remaps
-
-## Extras
-
-[extras.ahk](extras.ahk) contains a few optional quality-of-life tweaks.
-
-* `CapsLock` switches the input language/layout via `Win+Space`.
-* stand-alone left `Alt` is suppressed, so tapping it does not focus the application menu.
-* stand-alone left/right `Win` are suppressed, so tapping them does not open the Start menu.
-* `Alt` and `Win` still work as modifiers in combinations such as `Alt+Tab` or `Win+E`.
-
-Disabling `Win` and `Alt` menu behavior is useful because a plain tap on those keys opens a menu and steals focus, which interrupts typing and breaks flow.
-
 ## Hotkeys
 
 * physical `Right Alt` + `j/k/i/l` -> left/down/up/right
@@ -60,6 +40,17 @@ In the `x10` profile, left `Ctrl` is the one exception. Instead of forwarding `C
 
 The motivation is predictability. Classic `Ctrl+Arrow` movement is often too context-dependent: sometimes the caret jumps far, sometimes only a short distance. Ten plain key presses feel much more uniform and easier for the brain to estimate.
 
+## Extras
+
+[extras.ahk](extras.ahk) contains a few optional quality-of-life tweaks.
+
+* `CapsLock` switches the input language/layout via `Win+Space`.
+* stand-alone left `Alt` is suppressed, so tapping it does not focus the application menu.
+* stand-alone left/right `Win` are suppressed, so tapping them does not open the Start menu.
+* `Alt` and `Win` still work as modifiers in combinations such as `Alt+Tab` or `Win+E`.
+
+Disabling `Win` and `Alt` menu behavior is useful because a plain tap on those keys opens a menu and steals focus, which interrupts typing and breaks flow.
+
 ## Implementation Details
 
 On Windows, especially with layouts that treat `Right Alt` as `AltGr`, remapping physical `Right Alt` to `AppsKey` turned out to be more reliable than trying to work around `AltGr` behavior in AutoHotkey itself.
@@ -70,5 +61,14 @@ The setup used here is:
 2. use one of the `jkil.*.ahk` scripts, which listen to `AppsKey` as the internal layer key
 
 This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` behaves like `Ctrl+Alt` on some non-English layouts.
+
+Files used by this setup:
+
+* [jkil.x10.ahk](jkil.x10.ahk) for the `x10` profile (`Left Ctrl` means repeat 10 times)
+* [jkil.by-word.ahk](jkil.by-word.ahk) for the by-word profile (`Left Ctrl` means normal `Ctrl`)
+* [extras.ahk](extras.ahk) for extra helpers such as `CapsLock` language switch and suppressing stand-alone `Alt`/`Win` menu behavior
+* [ralt-to-appskey.reg](ralt-to-appskey.reg) to remap physical `Right Alt` to `AppsKey`
+* [swap-lctrl-lalt-and-ralt-to-appskey.reg](swap-lctrl-lalt-and-ralt-to-appskey.reg) to keep swapped left `Ctrl/Alt` and also remap physical `Right Alt` to `AppsKey`
+* [reset-scancode-map.reg](reset-scancode-map.reg) to remove all `Scancode Map` remaps
 
 `Scancode Map` is one system-wide table. Applying one of these `.reg` files replaces the whole table, not just one remap. Use [reset-scancode-map.reg](reset-scancode-map.reg) to clear all such remaps.
