@@ -28,21 +28,16 @@ Uses [AutoHotkey](https://www.autohotkey.com/).
 * [swap-lctrl-lalt-and-ralt-to-appskey.reg](swap-lctrl-lalt-and-ralt-to-appskey.reg) to keep swapped left `Ctrl/Alt` and also remap physical `Right Alt` to `AppsKey`
 * [reset-scancode-map.reg](reset-scancode-map.reg) to remove all `Scancode Map` remaps
 
-## Profiles
-
-* [jkil.x10.ahk](jkil.x10.ahk): left `Ctrl` is treated as a multiplier, so `physical Right Alt + left Ctrl + j` moves left 10 times.
-* [jkil.by-word.ahk](jkil.by-word.ahk): left `Ctrl` keeps its normal meaning, so `physical Right Alt + left Ctrl + j` sends `Ctrl+Left`.
-
 ## Extras
 
 [extras.ahk](extras.ahk) contains a few optional quality-of-life tweaks.
-
-The main motivation is that a plain tap on `Alt` or `Win` opens a menu and steals focus, which interrupts typing and breaks flow.
 
 * `CapsLock` switches the input language/layout via `Win+Space`.
 * stand-alone left `Alt` is suppressed, so tapping it does not focus the application menu.
 * stand-alone left/right `Win` are suppressed, so tapping them does not open the Start menu.
 * `Alt` and `Win` still work as modifiers in combinations such as `Alt+Tab` or `Win+E`.
+
+Disabling `Win` and `Alt` menu behavior is useful because a plain tap on those keys opens a menu and steals focus, which interrupts typing and breaks flow.
 
 ## Hotkeys
 
@@ -65,8 +60,6 @@ In the `x10` profile, left `Ctrl` is the one exception. Instead of forwarding `C
 
 The motivation is predictability. Classic `Ctrl+Arrow` movement is often too context-dependent: sometimes the caret jumps far, sometimes only a short distance. Ten plain key presses feel much more uniform and easier for the brain to estimate.
 
-`Scancode Map` is one system-wide table. Applying one of these `.reg` files replaces the whole table, not just one remap. Use [reset-scancode-map.reg](reset-scancode-map.reg) to clear all such remaps.
-
 ## Implementation Details
 
 On Windows, especially with layouts that treat `Right Alt` as `AltGr`, remapping physical `Right Alt` to `AppsKey` turned out to be more reliable than trying to work around `AltGr` behavior in AutoHotkey itself.
@@ -77,3 +70,5 @@ The setup used here is:
 2. use one of the `jkil.*.ahk` scripts, which listen to `AppsKey` as the internal layer key
 
 This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` behaves like `Ctrl+Alt` on some non-English layouts.
+
+`Scancode Map` is one system-wide table. Applying one of these `.reg` files replaces the whole table, not just one remap. Use [reset-scancode-map.reg](reset-scancode-map.reg) to clear all such remaps.
