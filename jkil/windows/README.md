@@ -11,15 +11,6 @@ In this doc only the difference (Windows specific) with [the main concept](../RE
 
 Uses [AutoHotkey](https://www.autohotkey.com/).
 
-This folder now contains the AutoHotkey v2 setup:
-
-* [jkil.x10.ahk](jkil.x10.ahk) for the `x10` profile (`Left Ctrl` means repeat 10 times)
-* [jkil.by-word.ahk](jkil.by-word.ahk) for the by-word profile (`Left Ctrl` means normal `Ctrl`)
-* [extras.ahk](extras.ahk) for extra helpers such as `CapsLock` language switch and suppressing stand-alone `Alt`/`Win` menu behavior
-* [ralt-to-appskey.reg](ralt-to-appskey.reg) to remap physical `Right Alt` to `AppsKey`
-* [swap-lctrl-lalt-and-ralt-to-appskey.reg](swap-lctrl-lalt-and-ralt-to-appskey.reg) to keep swapped left `Ctrl/Alt` and also remap physical `Right Alt` to `AppsKey`
-* [reset-scancode-map.reg](reset-scancode-map.reg) to remove all `Scancode Map` remaps
-
 ## Setup
 
 1. Install AutoHotkey.
@@ -38,6 +29,15 @@ The recommended setup is:
 2. use one of the `jkil.*.ahk` scripts, which listen to `AppsKey` as the layer key
 
 This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` behaves like `Ctrl+Alt` on some non-English layouts.
+
+## Files
+
+* [jkil.x10.ahk](jkil.x10.ahk) for the `x10` profile (`Left Ctrl` means repeat 10 times)
+* [jkil.by-word.ahk](jkil.by-word.ahk) for the by-word profile (`Left Ctrl` means normal `Ctrl`)
+* [extras.ahk](extras.ahk) for extra helpers such as `CapsLock` language switch and suppressing stand-alone `Alt`/`Win` menu behavior
+* [ralt-to-appskey.reg](ralt-to-appskey.reg) to remap physical `Right Alt` to `AppsKey`
+* [swap-lctrl-lalt-and-ralt-to-appskey.reg](swap-lctrl-lalt-and-ralt-to-appskey.reg) to keep swapped left `Ctrl/Alt` and also remap physical `Right Alt` to `AppsKey`
+* [reset-scancode-map.reg](reset-scancode-map.reg) to remove all `Scancode Map` remaps
 
 ## Profiles
 
