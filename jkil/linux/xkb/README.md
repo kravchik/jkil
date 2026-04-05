@@ -8,30 +8,30 @@ J K L    ← ↓ →
 
 ![Image of JKIL](../../../images/jkil-keyboard.jpg)
 
-`xkb` - is a set of configuration files located at `/usr/share/X11/xkb/`. It is a quite a sophisticated system used to configure everything, from layout to special keys.
+`xkb` is a set of configuration files located at `/usr/share/X11/xkb/`. It is quite a sophisticated system used to configure everything from layout to special keys.
 There are several ways to work with it.
 
 1. make changes directly to config files **(TODO, try to implement)**
-2. make 'right' changes to config files so that the settings would be availble via Ubuntu's settings GUI  **(TODO, try to implement)**
-3. get "compiled config", which is one file with all tweaks (used by Ubuntu), layouts, etc. compiled together. Modify it, and upload.
+2. make the "right" changes to config files so that the settings become available via Ubuntu's settings GUI **(TODO, try to implement)**
+3. get the "compiled config", which is one file with all tweaks, layouts, etc. compiled together (used by Ubuntu). Modify it, and upload it.
 
-It is yet to manage #1, or #2 approach. Currently, I am using #3. It has one big disadvantage - when you make any change to keyboard settings, the system will recompile the configuration file and "forget" about your changes. So, you need to re-read the newly compiled configuration, apply changes, and upload. And, of course, you apply this compiled configuration after each restart.
-But even given that - this approach is much better than Autokey.
+I have not yet managed to get approach #1 or #2 working. Currently, I am using #3. It has one big disadvantage: when you make any change to keyboard settings, the system recompiles the configuration file and "forgets" your changes. So you need to re-read the newly compiled configuration, apply your changes again, and upload it. And, of course, you need to apply this compiled configuration after each restart.
+Even with that limitation, this approach is much better than AutoKey.
 
 ### 1. Enable switching to 3rd level
-In my configuration, I am using '3rd level' to define jkil cursor. And in order use it, its key should be defined.
+In my configuration, I am using the "3rd level" to define the jkil cursor. In order to use it, its key must be defined.
 ![Image of setting](setting1.png)
 
 ### 2. Load compiled keyboard configuration
-In this step, a compiled file with a full keyboard configuration should be "pulled" from the system.
+In this step, a compiled file with the full keyboard configuration should be "pulled" from the system.
 
 `$ xkbcomp $DISPLAY output.xkb`
 
 ### 3. Edit output.xkb file.
 
-'Types' in xkb are defining combinations of mod keys (shift, alt, etc) and how they select one of four levels in a specific key configuration.
+'Types' in xkb define combinations of modifier keys (`Shift`, `Alt`, etc.) and how they select one of four levels in a specific key configuration.
 
-In xkb_types section add:
+In the `xkb_types` section add:
 
 ```
     type "JKIL_TYPE" {
@@ -46,10 +46,10 @@ In xkb_types section add:
     };
 ```
 
-'Symbols' in xkb are defining actual keys and how they behave in each of four 'levels'. In jkil configuration I am defining only 'action' field, so the configuration doesn't override symbols themselves.
-Also, two groups are defined here with the same action. It is for two layouts.
+'Symbols' in xkb define actual keys and how they behave in each of four levels. In the jkil configuration I define only the `action` field, so the configuration does not override the symbols themselves.
+Also, two groups are defined here with the same action. This is for two layouts.
 
-In xkb_symbols section add (not replace!):
+In the `xkb_symbols` section add this block (do not replace the whole section):
 
 ```
     key <AC07> {//j : LEFT
@@ -111,9 +111,9 @@ In xkb_symbols section add (not replace!):
 
 ```
 
-*In my configuration, in Cyrillic group, ENTER won't work until I remove an explicit type[group2]= "ALPHABETIC" for AC10 semicolon key. For other keys there is no such exception.*
+*In my configuration, in the Cyrillic group, `ENTER` will not work until I remove an explicit `type[group2]= "ALPHABETIC"` for the `AC10` semicolon key. The other keys do not have this exception.*
 
-### 4. Finally, upload changed configuration.
+### 4. Finally, upload the changed configuration.
 
 `$ xkbcomp output.xkb $DISPLAY`
 
