@@ -19,17 +19,6 @@ Uses [AutoHotkey](https://www.autohotkey.com/).
 4. Optionally also run [extras.ahk](extras.ahk).
 5. Optional: add the scripts you use to Windows startup if you want them enabled after login.
 
-## Recommended Approach
-
-On Windows, especially with layouts that treat `Right Alt` as `AltGr`, remapping physical `Right Alt` to `AppsKey` turned out to be more reliable than trying to work around `AltGr` behavior in AutoHotkey itself.
-
-The recommended setup is:
-
-1. remap physical `Right Alt` to `AppsKey`
-2. use one of the `jkil.*.ahk` scripts, which listen to `AppsKey` as the layer key
-
-This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` behaves like `Ctrl+Alt` on some non-English layouts.
-
 ## Files
 
 * [jkil.x10.ahk](jkil.x10.ahk) for the `x10` profile (`Left Ctrl` means repeat 10 times)
@@ -46,12 +35,16 @@ This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` be
 
 ## Extras
 
-* [extras.ahk](extras.ahk): `CapsLock` switches the input language/layout via `Win+Space`.
-* [extras.ahk](extras.ahk): stand-alone left `Alt` is suppressed, so tapping it does not focus the application menu.
-* [extras.ahk](extras.ahk): stand-alone left/right `Win` are suppressed, so tapping them does not open the Start menu.
-* [extras.ahk](extras.ahk): `Alt` and `Win` still work as modifiers in combinations such as `Alt+Tab` or `Win+E`.
+[extras.ahk](extras.ahk) contains a few optional quality-of-life tweaks.
 
-## Main hotkeys
+The main motivation is that a plain tap on `Alt` or `Win` opens a menu and steals focus, which interrupts typing and breaks flow.
+
+* `CapsLock` switches the input language/layout via `Win+Space`.
+* stand-alone left `Alt` is suppressed, so tapping it does not focus the application menu.
+* stand-alone left/right `Win` are suppressed, so tapping them does not open the Start menu.
+* `Alt` and `Win` still work as modifiers in combinations such as `Alt+Tab` or `Win+E`.
+
+## Hotkeys
 
 * physical `Right Alt` + `j/k/i/l` -> left/down/up/right
 * physical `Right Alt` + `m/n` -> backspace/delete
@@ -59,14 +52,28 @@ This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` be
 * physical `Right Alt` + `y/h` -> page up/page down
 * physical `Right Alt` + `;` -> enter
 
-In this setup, physical `Right Alt` is remapped to `AppsKey`, and the scripts use that remapped key as the internal layer key. Left-hand modifiers are applied automatically while holding the same physical key.
+In this setup, physical `Right Alt` is remapped to `AppsKey`, and the scripts use that remapped key as the internal layer key.
+
+In general, any left-hand modifier is forwarded together with the emitted key. For example:
 
 * physical `Right Alt` + left `Shift` + `j` -> `Shift+Left`
-* in the by-word profile: physical `Right Alt` + left `Ctrl` + `j` -> `Ctrl+Left`
-* in the x10 profile: physical `Right Alt` + left `Ctrl` + `j` -> `Left` 10 times
 * physical `Right Alt` + left `Alt` + `j` -> `Alt+Left`
 * physical `Right Alt` + left `Win` + `j` -> `Win+Left`
-* combinations also work, for example physical `Right Alt` + left `Shift` + `o` -> `Shift+End`
-* in the by-word profile: physical `Right Alt` + left `Ctrl` + left `Shift` + `o` -> `Ctrl+Shift+End`
+* in the by-word profile, physical `Right Alt` + left `Ctrl` + `j` -> `Ctrl+Left`
+
+In the `x10` profile, left `Ctrl` is the one exception. Instead of forwarding `Ctrl`, the script emits 10 plain key presses. For example, physical `Right Alt` + left `Ctrl` + `j` sends `Left` 10 times.
+
+The motivation is predictability. Classic `Ctrl+Arrow` movement is often too context-dependent: sometimes the caret jumps far, sometimes only a short distance. Ten plain key presses feel much more uniform and easier for the brain to estimate.
 
 `Scancode Map` is one system-wide table. Applying one of these `.reg` files replaces the whole table, not just one remap. Use [reset-scancode-map.reg](reset-scancode-map.reg) to clear all such remaps.
+
+## Implementation Details
+
+On Windows, especially with layouts that treat `Right Alt` as `AltGr`, remapping physical `Right Alt` to `AppsKey` turned out to be more reliable than trying to work around `AltGr` behavior in AutoHotkey itself.
+
+The setup used here is:
+
+1. remap physical `Right Alt` to `AppsKey`
+2. use one of the `jkil.*.ahk` scripts, which listen to `AppsKey` as the internal layer key
+
+This avoids layout-specific `AltGr` quirks, including cases where `Right Alt` behaves like `Ctrl+Alt` on some non-English layouts.
